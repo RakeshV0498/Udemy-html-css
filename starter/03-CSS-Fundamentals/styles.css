@@ -1,0 +1,249 @@
+* {
+  /* border-top: 10px solid #1098ad; */
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+/* color will only be specified to the elements where the color property is not set */
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #444;
+  background-color: #d9f2f2;
+  border-top: 10px solid #1098ad;
+  /* position: relative; */
+}
+.container {
+  width: 800px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
+}
+
+.main-header {
+  background-color: #bab9b9;
+  /* padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px; */
+  padding: 20px 30px;
+  margin-bottom: 60px;
+  position: relative;
+  /* height: 80px; */
+}
+
+.post-header {
+  margin-bottom: 40px;
+}
+
+.post-img {
+  width: 100%;
+  height: auto;
+}
+
+aside {
+  background-color: #bab9b9;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+  padding: 50px 0;
+  margin-bottom: 60px;
+  width: 500px;
+}
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+}
+
+nav {
+  font-size: 18px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5px;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+h2::first-letter {
+  font-size: 80px;
+}
+
+h2::after {
+  content: "TOP";
+  background-color: #ffe70e;
+  color: #000;
+  font-size: 20px;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -25px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  margin-top: 40px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  font-size: 22px;
+  /* 1.5 times size of font size */
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+/* + means select adjacent sibling selector, element comes right after the element */
+h3 + p::first-line {
+  color: red;
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+#copyright {
+  font-size: 16px;
+}
+
+#author {
+  font-style: italic;
+}
+
+/* text align aligns the text relative to the parent element, if its block element, if we use center, it will align it to center of the page */
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related-posts {
+  list-style-type: none;
+}
+
+li:first-child {
+  font-weight: bold;
+}
+
+li:last-child {
+  font-style: italic;
+}
+
+li:nth-child(2) {
+  font-family: Arial, sans-serif;
+}
+
+/* this wont work, it will select the articles first child element */
+article p:first-child {
+  color: aquamarine;
+}
+/* styling links */
+/* It should be the same order as below */
+
+a:link {
+  color: #1098ad;
+  text-decoration: none;
+}
+
+a:visited {
+  /* color: #aa11dd; */
+  color: #1098ad;
+}
+
+a:hover,
+a:focus {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline orangered;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
+/* nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+} */
+
+nav a:link {
+  margin: 10px 20px 0 0;
+  display: inline-block;
+  /* display: flex;
+  align-items: center; */
+}
+
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+.btn-like {
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid grey;
+  border-radius: 5px;
+  padding: 15px;
+  position: absolute;
+  /* top: 50;
+  left: 50; */
+  bottom: 0px;
+  right: 0px;
+}
+
+/* Resolving Conflicts */
+
+/* this win always */
+#copyright {
+  color: red;
+  text-align: center;
+}
+
+.copyright {
+  color: blue;
+}
+
+.text {
+  color: yellow;
+}
+
+/* But this one wins due to !important method */
+footer p {
+  color: green !important;
+}

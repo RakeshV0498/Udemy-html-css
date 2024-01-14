@@ -1,0 +1,61 @@
+Conflicst between selectors
+
+ Selector Precedence:
+ !Important - Will be last resort for confilicting styles it will win
+ 1. ID (#)
+ 2. Class (.)
+ 3. element with Pseudo Class(:first-child,...)
+ 4. elements (p,div,li)
+ 5. Universal Selctot(*)
+
+If there is multiple styles(confilicting) for same id/class/elements, it will take the last one
+
+But inline style always will be priority, if we use inline styles.
+
+CSS BOX Model
+
+-> content can be anything
+-> border (A line around the element, still inside of the element)
+-> padding (Invisible space around the content, still inside of the element)
+-> Margin (Space outside of the element, between elemnets in the document)
+-> Fill area (Area that gets filled with background color or background image)
+
+final element width = left border + left padding + width(content) + right padding + right border.
+
+final element height = top border + top padding + height(content) + bottom padding + bottom border
+
+padding shorthand - padding top bottom left right -> padding 40px 20px;
+
+collapsing margin - whenever there is a confilict in the margin between two elemnets, the element with higher value takes 
+
+to center the webpage, we need to put all the elements in the center
+
+so create a container for the all the elments and set width to some value and then add margin-left and margin-right to auto.
+
+it will make the page center. 
+
+for inline elements, paddings and margins are applied only horizontally(left and right)
+
+display: block,inline-block,inline (Refer the slides)
+
+Positions
+
+Normal Flow - defualt:relative
+>Default Positioning
+>Element is "in flow"
+>Elements are simply laid out according to their order in the HTML code.
+
+Absolute
+
+Element is removed from normal flow, Out of flow
+
+No impact on surronding elements, might overlap them
+
+we use top,bottom,left or right to offset the element from its relatively positioned container
+
+postion: absolute;
+
+by defualt it will be positioned according to the viewport.
+
+
+
