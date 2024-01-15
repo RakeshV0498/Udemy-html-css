@@ -27,7 +27,7 @@ body {
   padding-right: 40px; */
   padding: 20px 30px;
   margin-bottom: 60px;
-  position: relative;
+
   /* height: 80px; */
 }
 
@@ -213,6 +213,9 @@ nav a:link:last-child {
   margin-right: 0;
 }
 
+footer {
+  position: relative;
+}
 .btn-like {
   font-size: large;
   font-weight: bold;
