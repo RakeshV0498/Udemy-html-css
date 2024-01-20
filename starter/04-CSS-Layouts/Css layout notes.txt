@@ -1,0 +1,83 @@
+Layout is the way text,images and other content is placed and arranged on a webpage
+
+layout gives the pages a visual structure, into which we place our content
+
+two types of layout
+
+1. Page layout - is laying out the elements in the websites just like normal flow.
+
+2. componenet layout - each componenet has their own layout inside of the layout.
+
+
+There are three ways of building layouts
+
+1. Float layouts
+  the old way of building layouts of all sizes, using the float css property. Still used, but getting outdated fast.
+
+2. flexbox 
+
+  Modern way of laying out elements in a 1-dimensional row without using floats. Perfect for component layouts.
+
+3. CSS Grid
+
+  for laying out element in a fully-fledged 2-dimensional grid. Perfect for page layouts and complex componenets.
+
+flexbox
+
+      Defaults: 
+      flex-grow: 0;
+      flex-shrink: 1;
+      flex-basis: auto; 
+
+Flex basis set the minimum width on the flex items, if the flex item width is more than the basis then it will take the actual space rather than the set space. Flex basis directly related to the flex-shrink property so if the flex basis is making the width of the flex items greater than the flex container, it will shrink the flex items to flex container width if we set the flex shrink to 0, then the flex items will break out of the flex container , if the flex items combined width is greater than the flex container width
+
+if we set flex grow to 1, then the flex items will occupy the empty spaces and equally share the space between them.
+
+flex grow if set it to 2, then it will get the double the value than the other flex items.
+
+for example, we have 5 flex items and 600px empty space, then flex item with grow set to 2, will get 200px and the other flex items get 100 px each. 
+
+the same can be applied for any numbers in flex grow like 1,2,3,4... and so on. 
+
+
+Css Grid
+
+Here we use css grid to create two dimensional layout, where we rows and columns
+
+display:grid;
+
+same as flexbox, here we also have container and child elements, here we call it as grid container and grid items
+
+it will set the container as grid
+
+grid-template-columns: 250px 150px;
+
+here we can use repeat(4,1fr), which will update 4 columns with same width
+
+for the property, it will create the two columns, one with 250px width and another 150px width.
+
+We can create any numbers columns that we need. 
+
+the height of the elements will be determined by the propety set in the grid items, if any elements has set height to 250px,then that entire row will have the same height as 250px. 
+
+grid-template-rows: 300px 200px;
+
+here we set the height of the row, same as columns. 
+
+grid lines - we need to add + 1 to grid rows and columns
+
+if we have 3 columns then we have 4 grid lines and 
+  2 rows means then we have 3 grid lines
+
+  grid cells are part of space where we have intersection of grid lines.
+
+  grid cells may or maynot contain grid items.
+
+  Gap between the rows and columns and between grid items is called gutter.
+
+
+we can use fr(fractions) for setting width and height
+
+if we use fr, it will take the width and height automatically according the size of the container
+
+if we explicity set the width and height, then the fr will take that height as base, for example if we set height 150px to one of the grid items or on the grid container itself, then the 1fr will be 150px, so the height for 1fr will be 150px.  and the same goes for width as well

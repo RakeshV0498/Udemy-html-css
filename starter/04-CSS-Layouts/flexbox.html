@@ -36,10 +36,53 @@
         /* STARTER */
         font-family: sans-serif;
         background-color: #ddd;
-        font-size: 40px;
+        font-size: 34px;
         margin: 40px;
 
         /* FLEXBOX */
+        display: flex;
+        /* ALigns the items to the center in horizontal way */
+        justify-content: flex-start;
+        /* ALigns the items to the center in vertical way */
+        align-items: center;
+
+        /* gap: 10px; */
+      }
+
+      .el {
+        /*Defaults: 
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto; 
+        */
+        /* Flex basis set the minimum width on the flex items, if the flex item width is more than the basis then it will take the actual space rather than the set space. Flex basis directly related to the flex-shrink property so if the flex basis is making the width of the flex items greater than the flex container, it will shrink the flex items to flex container width 
+        if we set the flext shrink to 0, then the flex items will break out of the flex container , if the flex items combined width is greater than the flex container width*/
+        /* flex-shrink: 0;
+        flex-basis: 100px; */
+        flex: 0 0 100px;
+        /* flex-grow: 1; */
+      }
+
+      .el--1 {
+        align-self: flex-start;
+        /* if we provide order 1 again, then it will be pushed before the last one */
+        /* order: 1; */
+        order: 2;
+      }
+
+      .el--5 {
+        align-self: stretch;
+        flex-grow: 1;
+      }
+
+      .el--6 {
+        /* if we give order less than zero(-1), then that element will pushed to start i.e 1 */
+        order: -1;
+      }
+
+      .el--4 {
+        /* if we give order greater than zero, (1), then that element will be pushed to the end */
+        order: 1;
       }
     </style>
   </head>

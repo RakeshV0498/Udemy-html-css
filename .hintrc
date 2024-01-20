@@ -11,6 +11,7 @@
     ],
     "meta-viewport": "off",
     "meta-charset-utf-8": "off",
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "button-type": "off"
   }
 }
