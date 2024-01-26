@@ -17,6 +17,13 @@
         color: #343a40;
       }
 
+      .main-container {
+        /* position: relative; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 30px;
+      }
+
       .carousel {
         width: 800px;
         margin: 100px auto;
@@ -92,8 +99,8 @@
       .dots {
         position: absolute;
         left: 50%;
-        bottom: 0;
-        transform: translate(-50%, 32px);
+        bottom: 50%;
+        transform: translate(-45%, 50px);
 
         display: flex;
         gap: 12px;
@@ -153,12 +160,12 @@
           />
         </svg>
       </button>
-      <div class="dots">
-        <button class="dot dot--fill">&nbsp;</button>
-        <button class="dot">&nbsp;</button>
-        <button class="dot">&nbsp;</button>
-        <button class="dot">&nbsp;</button>
-      </div>
+    </div>
+    <div class="dots">
+      <button class="dot dot--fill">&nbsp;</button>
+      <button class="dot">&nbsp;</button>
+      <button class="dot">&nbsp;</button>
+      <button class="dot">&nbsp;</button>
     </div>
   </body>
 </html>
