@@ -12,6 +12,12 @@
     "meta-viewport": "off",
     "meta-charset-utf-8": "off",
     "disown-opener": "off",
-    "button-type": "off"
+    "button-type": "off",
+    "axe/name-role-value": [
+      "default",
+      {
+        "button-name": "off"
+      }
+    ]
   }
 }

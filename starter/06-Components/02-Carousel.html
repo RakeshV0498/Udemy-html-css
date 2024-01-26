@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel Component</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1;
+        color: #343a40;
+      }
+
+      .carousel {
+        width: 800px;
+        margin: 100px auto;
+        padding: 32px 48px 32px 86px;
+        background-color: #087f5b;
+        border-radius: 8px;
+        position: relative;
+        display: flex;
+        /* align-items: center; */
+        gap: 86px;
+      }
+
+      img {
+        height: 200px;
+        border-radius: 8px;
+        transform: scale(1.5);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+      }
+      .testimonial-text {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 32px;
+        color: #e6fcf5;
+      }
+      .testimonial-author {
+        font-size: 14px;
+        margin-bottom: 4px;
+        color: #c3fae8;
+      }
+      .testimonial-job {
+        font-size: 12px;
+        color: #c3fae8;
+      }
+
+      /* Controls */
+
+      .btn {
+        background-color: #fff;
+        border: none;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+      }
+
+      .btn--left {
+        /* In relation to the parent element */
+        left: 0;
+        top: 50%;
+
+        /* In relation to the eletment itself */
+        transform: translate(-50%, -50%);
+      }
+
+      .btn--right {
+        right: 0;
+        top: 50%;
+        transform: translate(50%, -50%);
+      }
+
+      .btn-icon {
+        width: 24px;
+        height: 24px;
+        stroke: #087f5b;
+      }
+
+      .dots {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, 32px);
+
+        display: flex;
+        gap: 12px;
+      }
+
+      .dot {
+        height: 12px;
+        width: 12px;
+        background-color: #fff;
+        border: 2px solid #087f5b;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+      .dot--fill {
+        background-color: #087f5b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel">
+      <img src="maria.jpg" alt="Maria de Almeida" />
+      <blockquote class="testimonial">
+        <p class="testimonial-text">
+          "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat
+          harum odio voluptatibus sed ipsam? Quis amet voluptatum corrupti quae
+          recusandae! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Nostrum, tempora?"
+        </p>
+        <p class="testimonial-author">Maria de Almedia</p>
+        <p class="testimonial-job">Senior Product Manager at EDP Comercial</p>
+      </blockquote>
+      <button class="btn btn--left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="btn-icon"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
+      <button class="btn btn--right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="btn-icon"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
+      <div class="dots">
+        <button class="dot dot--fill">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+        <button class="dot">&nbsp;</button>
+      </div>
+    </div>
+  </body>
+</html>
