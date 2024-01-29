@@ -107,46 +107,10 @@
   font-weight: 700;
 }
 
-.margin-right-sm {
-  margin-right: 1.6rem !important;
-}
-
 .hero-img {
   width: 100%;
 }
 
-/* ------------------------------------ */
-/* button Section */
-/* ------------------------------------ */
-
-.btn:is(:link, :visited) {
-  display: inline-block;
-  text-decoration: none;
-  font-size: 2rem;
-  font-weight: 600;
-  padding: 1.6rem 3.2rem;
-  border-radius: 9px;
-  transition: all 1s;
-}
-
-.btn--full:is(:link, :visited) {
-  background-color: #e67e22;
-  color: #fff;
-}
-.btn--full:is(:hover, :active) {
-  background-color: #cf711f;
-}
-
-.btn--outline:is(:link, :visited) {
-  background-color: #fff;
-  color: #555;
-}
-
-.btn--outline:is(:hover, :active) {
-  background-color: #fdf2e9;
-  /* trick to add border inside  */
-  box-shadow: inset 0 0 0 3px #fff;
-}
 /* ------------------------------------ */
 /* Featured in section */
 /* ------------------------------------ */
@@ -237,4 +201,229 @@
 .step-description {
   font-size: 1.8rem;
   line-height: 1.6;
+}
+
+/*------------------------------------ */
+/* Meals Section */
+/* ------------------------------------ */
+
+.section-meals {
+  padding: 9.6rem 0;
+}
+
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.meal:hover {
+  transform: translateY(-1.2rem);
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+.meal-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.meal-img {
+  width: 100%;
+}
+
+.meal-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+.tag--vegetarian {
+  background-color: #51cf66;
+  color: #111;
+}
+.tag--vegan {
+  background-color: #94d32d;
+  color: #111;
+}
+.tag--Paleo {
+  background-color: #fcd34b;
+  color: #111;
+}
+
+.meal-name {
+  font-size: 2.4rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.meal-attributes {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.meal-attribute {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.meal-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+  color: #e67e22;
+}
+
+.all-recipes {
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/*------------------------------------ */
+/* Testimonial Section */
+/* ------------------------------------ */
+
+.section-testimonials {
+  background-color: #fdf2e9;
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+
+.testimonials-container {
+  padding: 9.6rem;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-img {
+  display: block;
+  width: 100%;
+  transition: all 0.5s ease-in;
+}
+
+.gallery-img:hover {
+  transform: scale(1.1);
+}
+
+/*------------------------------------ */
+/* Testimonial Section */
+/* ------------------------------------ */
+
+.section-pricing {
+  padding: 9.6rem 0;
+}
+
+.pricing-plan {
+  border-radius: 11px;
+  width: 75%;
+}
+
+.pricing-plan--starter {
+  justify-self: end;
+  padding: 4.6rem;
+  border: 2px solid #fdf2e9;
+}
+
+.pricing-plan-complete {
+  background-color: #fdf2e9;
+  padding: 4.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-plan-complete::after {
+  content: "Best Value";
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: #fcd34b;
+  color: #333;
+  padding: 0.8rem 8em;
+
+  position: absolute;
+  top: 6%;
+  right: -26%;
+  transform: rotate(45deg);
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.plan-name {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.75;
+  color: #cf711f;
+  margin-bottom: 3.2rem;
+}
+.plan-price {
+  font-size: 7.4rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.6rem;
+}
+.dollar {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.plan-text {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #6f6f6f;
+}
+
+.plan-sign-up {
+  text-align: center;
+  margin-top: 4.8rem;
 }
