@@ -3,6 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Omnifood is an AI powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+    />
+    <link
+      rel="shortcut icon"
+      href="./img/favicon copy.png"
+      type="image/x-icon"
+    />
+    <link rel="apple-touch-icon" href="./img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,7 +24,7 @@
     <link rel="stylesheet" href="./css/general.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/queries.css" />
-    <title>Omnifood</title>
+    <title>Omnifood &mdash; Never Cook Again</title>
   </head>
   <body>
     <header class="header" id="header">
@@ -50,7 +62,7 @@
             <a class="btn btn--full margin-right-sm" href="#cta"
               >Start Eating Well</a
             >
-            <a class="btn btn--outline" href="#meals">Learn more &darr;</a>
+            <a class="btn btn--outline" href="#htw">Learn more &darr;</a>
 
             <div class="delivered-meals">
               <div class="delivered-imgs">
@@ -92,12 +104,16 @@
             </div>
           </div>
           <div class="hero-img-box">
-            <img
-              class="hero-img"
-              src="img/hero.png"
-              alt="Woman enjoying food,
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero-min.png" type="image/png" />
+              <img
+                class="hero-img"
+                src="img/hero-min.png"
+                alt="Woman enjoying food,
           meals in storage container and food bowls on a table"
-            />
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -609,13 +625,15 @@
                     >Where you did hear about us</label
                   >
                   <select
-                    name=""
+                    name="From-Where"
                     class="form-select"
                     id="select-where"
                     required
                   >
                     <option value="">Please choose one option</option>
-                    <option value="friends-family">Friends and Family</option>
+                    <option value="friends-family" selected>
+                      Friends and Family
+                    </option>
                     <option value="youtube">Youtube Video</option>
                     <option value="facebook">Facebook</option>
                     <option value="podcast">Podcast</option>
@@ -638,7 +656,7 @@
     <footer class="footer">
       <div class="container grid grid--footer">
         <div class="logo-col">
-          <a href="#header" class="footer-logo">
+          <a href="#" class="footer-logo">
             <img src="img/omnifood-logo.png" alt="omnifood logo" class="logo" />
           </a>
 

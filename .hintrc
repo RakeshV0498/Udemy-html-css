@@ -19,6 +19,7 @@
         "button-name": "off",
         "link-name": "off"
       }
-    ]
+    ],
+    "manifest-app-name": "off"
   }
 }
